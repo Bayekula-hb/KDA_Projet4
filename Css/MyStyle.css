@@ -1,6 +1,7 @@
 body{
     background-color: rgb(140,195,234);
     /* background: linear-gradient(#8CC6EC, #9599E2); */
+    background-image: linear-gradient(to bottom right, #8bc0ec, #9599e2);
 }
 form{
     width: 80%;
@@ -21,16 +22,12 @@ form{
     margin-top: 10%;
     height: 100%;
     background-color: rgb(79,84,212);
-    /* color: rgb(255, 255, 255); */
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
-    color: white;
 }
-.Left{
+.Left, .Right{
     border: none;
-}
-.Right{
-    border: none;
+    margin: 5%;
 }
 legend{
     text-decoration-style: none;
@@ -50,17 +47,20 @@ p select, .Option{
     width: 100%;
     border: none;
     background-color: #FFFFFF;
-    border-bottom: 2px solid rgb(249,245,255);
+    border-bottom: 2px solid rgb(177, 177, 168);
     font-size: 1em;
     color: rgb(160, 153, 153);
+}
+.Business::placeholder, .FirstName::placeholder, .LastName::placeholder, .Company::placeholder, .Employees::placeholder, .Email::placeholder{
+    color: rgb(177, 177, 168);
 }
 .Business, .FirstName, .LastName, .Company{
     width: 100%;
     border: none;
     background-color: #FFFFFF;
-    border-bottom: 2px solid rgb(249,245,255);
+    border-bottom: 2px solid rgb(177, 177, 168);
     font-size: 1em;
-    color: rgb(160, 153, 153);
+    color: rgb(177, 177, 168);
 }
 .FirstName, .Business{
     width: 40%;
@@ -69,24 +69,34 @@ p select, .Option{
     display: inline-block;
     width: 50%;
 }
+.LastName{
+    width: 57%;
+}
 .AcceptPara{
-    width: 50%;
+    width: 60%;
 }
-a{
-    color: rgb(255, 255, 255);
-}
-button{
-    border: 3px solid rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
+.AcceptPara .LabelAccept{
+    color: white;
 }
 /* Seconde partie du formulaire*/
+.Right > *{
+    margin: 5% 0% 5% 0%; 
+}
+.Additional::placeholder, .Street::placeholder, .Zipe::placeholder, .number::placeholder, .tel::placeholder, .Email::placeholder{
+    color: white;
+}
+.AcceptPara:nth-child(0n+2){
+    color: rgb(255, 255, 255);
+}
 .Street, .Additional, .Zipe, .Place, .number, .tel, .Email{
     border: none;
     background-color: rgb(79,84,212);;
-    border-bottom: 2px solid rgb(89,87,218);
-    /* color: rgb(255, 255, 255); */
-    /* color: white; */
+    border-bottom: 2px solid rgb(177, 177, 168);
+    color: white;
+}
+.Street{
+    width: 100%;
+}
 .AcceptPara{
     color: rgb(84,101,131);
 }
@@ -101,4 +111,28 @@ button{
     background-color: rgb(79,84,212);;
     border-bottom: 2px solid rgb(249,245,255);
     color: rgb(255, 255, 255);
+}
+a{
+    color: rgb(255, 255, 255);
+}
+#accept{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    border: 7px solid white;
+    border-radius: 50%;
+}
+#accept:focus {
+    border: 2px solid white;
+}
+#accept:checked {
+    border: 2px solid white;
+    border-radius: 70%;
+    padding: 5px;
+}
+button{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
 }
