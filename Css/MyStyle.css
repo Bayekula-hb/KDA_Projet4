@@ -1,7 +1,12 @@
 body{
     background-color: rgb(140,195,234);
-    /* background: linear-gradient(#8CC6EC, #9599E2); */
-    background-image: linear-gradient(to bottom right, #8bc0ec, #9599e2);
+    /* La Définition d'un fond dégrade à 90 dégré */
+    background-image: linear-gradient(90deg, #8bc0ec, rgb(149,153,226));
+    font-family: 'Roboto', serif;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Roboto+Mono:wght@300&family=Roboto:ital,wght@0,700;1,300&display=swap');
 }
 form{
     width: 80%;
@@ -31,17 +36,17 @@ form{
 }
 legend{
     text-decoration-style: none;
+    font-size: 2rem;
 }
 .Left legend{
     color: rgb(43,112,171);
-    font-size: 1.3rem;
     height: 80%;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 .Right legend{
     color: rgb(249,245,255);
-    font-size: 1.3rem;
-    padding-top: 10%;
+    padding-top: 5%;
+    height: 250%;
 }
 p select, .Option{
     width: 100%;
@@ -50,9 +55,14 @@ p select, .Option{
     border-bottom: 2px solid rgb(177, 177, 168);
     font-size: 1em;
     color: rgb(160, 153, 153);
+
+    outline: none;/*Pour enlever les bordures sur l'élément*/
 }
 .Business::placeholder, .FirstName::placeholder, .LastName::placeholder, .Company::placeholder, .Employees::placeholder, .Email::placeholder{
     color: rgb(177, 177, 168);
+}
+.Additional:focus, .Street:focus, .Zipe:focus, .number:focus, .tel:focus, .Email:focus, .Business:focus, .FirstName:focus, .LastName:focus, .Company:focus, .Employees:focus, .Email:focus{
+    outline: none;
 }
 .Business, .FirstName, .LastName, .Company{
     width: 100%;
@@ -63,24 +73,23 @@ p select, .Option{
     color: rgb(177, 177, 168);
 }
 .FirstName, .Business{
-    width: 40%;
-}
-.Employees, .LastName{
-    display: inline-block;
-    width: 50%;
-}
-.LastName{
-    width: 57%;
-}
-.AcceptPara{
     width: 60%;
 }
-.AcceptPara .LabelAccept{
-    color: white;
+.LastName, .Employees{
+    width: 35%;
+    margin-left: 2.1%;
 }
+
 /* Seconde partie du formulaire*/
 .Right > *{
-    margin: 5% 0% 5% 0%; 
+    padding: 1%; 
+}
+.Place, .tel{
+    width: 70%;
+}
+.Zipe, .number{
+    width: 25%;
+    margin-right: 2.1%;
 }
 .Additional::placeholder, .Street::placeholder, .Zipe::placeholder, .number::placeholder, .tel::placeholder, .Email::placeholder{
     color: white;
@@ -97,18 +106,24 @@ p select, .Option{
 .Street{
     width: 100%;
 }
+.Additional{
+    width: 100%;
+}
 .AcceptPara{
     color: rgb(84,101,131);
+}
+.AcceptPara{
+    width: 60%;
+}
+.AcceptPara .LabelAccept{
+    color: white;
 }
 .Email{
     width: 100%;
 }
-.Place{
-    width: 40%;
-}
 .Right legend>*{
     border: none;
-    background-color: rgb(79,84,212);;
+    background-color: rgb(79,84,212);
     border-bottom: 2px solid rgb(249,245,255);
     color: rgb(255, 255, 255);
 }
@@ -128,11 +143,11 @@ a{
 }
 #accept:checked {
     border: 2px solid white;
-    border-radius: 70%;
     padding: 5px;
 }
 button{
     border: 3px solid rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
+    padding: 3%;
 }
