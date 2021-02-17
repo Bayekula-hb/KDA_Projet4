@@ -2,18 +2,14 @@ body{
     background-color: rgb(140,195,234);
     /* La Définition d'un fond dégrade à 90 dégré */
     background-image: linear-gradient(90deg, #8bc0ec, rgb(149,153,226));
-    font-family: 'Roboto', serif;
-}
-@font-face{
-    font-family: 'Roboto';
-    src: url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Roboto+Mono:wght@300&family=Roboto:ital,wght@0,700;1,300&display=swap');
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 form{
     width: 80%;
     margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 500px;
+    height: auto;
 }
 .DivLeft{
     margin-top: 10%;
@@ -37,6 +33,7 @@ form{
 legend{
     text-decoration-style: none;
     font-size: 2rem;
+    font-weight: 700;
 }
 .Left legend{
     color: rgb(43,112,171);
@@ -55,7 +52,7 @@ p select, .Option{
     border-bottom: 2px solid rgb(177, 177, 168);
     font-size: 1em;
     color: rgb(160, 153, 153);
-
+    padding-bottom: 5px;
     outline: none;/*Pour enlever les bordures sur l'élément*/
 }
 .Business::placeholder, .FirstName::placeholder, .LastName::placeholder, .Company::placeholder, .Employees::placeholder, .Email::placeholder{
@@ -71,6 +68,9 @@ p select, .Option{
     border-bottom: 2px solid rgb(177, 177, 168);
     font-size: 1em;
     color: rgb(177, 177, 168);
+    padding-bottom: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 .FirstName, .Business{
     width: 60%;
@@ -102,6 +102,9 @@ p select, .Option{
     background-color: rgb(79,84,212);;
     border-bottom: 2px solid rgb(177, 177, 168);
     color: white;
+    padding-bottom: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 .Street{
     width: 100%;
